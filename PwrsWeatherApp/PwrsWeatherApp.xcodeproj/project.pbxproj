@@ -36,6 +36,11 @@
 		D00EA3152F4F41BD008D1744 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EA3142F4F41BD008D1744 /* RequestResult.swift */; };
 		D00EA3182F4F4204008D1744 /* MainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EA3172F4F4204008D1744 /* MainProvider.swift */; };
 		D00EA31A2F4F4239008D1744 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EA3192F4F4239008D1744 /* MainService.swift */; };
+		D00EA31D2F502EE3008D1744 /* MainDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EA31C2F502EE3008D1744 /* MainDataFlow.swift */; };
+		D00EA3202F508E47008D1744 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EA31F2F508E47008D1744 /* SkeletonView.swift */; };
+		D0B1AE192F50A64C00634D6E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1AE182F50A64C00634D6E /* GradientView.swift */; };
+		D0B1AE1B2F50AC1D00634D6E /* HourlyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1AE1A2F50AC1D00634D6E /* HourlyCell.swift */; };
+		D0EDB8C32F516D91009BCE0A /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EDB8C22F516D91009BCE0A /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +74,11 @@
 		D00EA3142F4F41BD008D1744 /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
 		D00EA3172F4F4204008D1744 /* MainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProvider.swift; sourceTree = "<group>"; };
 		D00EA3192F4F4239008D1744 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		D00EA31C2F502EE3008D1744 /* MainDataFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataFlow.swift; sourceTree = "<group>"; };
+		D00EA31F2F508E47008D1744 /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
+		D0B1AE182F50A64C00634D6E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		D0B1AE1A2F50AC1D00634D6E /* HourlyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCell.swift; sourceTree = "<group>"; };
+		D0EDB8C22F516D91009BCE0A /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +134,7 @@
 				D00EA2F12F4F30FC008D1744 /* MainTableDataSource.swift */,
 				D00EA2F32F4F3180008D1744 /* MainModel.swift */,
 				D00EA2F52F4F321E008D1744 /* MainViewModel.swift */,
+				D00EA31C2F502EE3008D1744 /* MainDataFlow.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -194,6 +205,7 @@
 		D00EA2F72F4F337B008D1744 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D00EA31E2F508E3A008D1744 /* Views */,
 				D00EA3132F4F41AF008D1744 /* Models */,
 				D00EA2F82F4F3383008D1744 /* Extensions */,
 				D00EA3092F4F4131008D1744 /* Services */,
@@ -225,6 +237,7 @@
 				D00EA3032F4F3EA0008D1744 /* DailtyForecastCell.swift */,
 				D00EA3052F4F3ECF008D1744 /* LoadingCell.swift */,
 				D00EA3072F4F3F02008D1744 /* ErrorCell.swift */,
+				D0B1AE1A2F50AC1D00634D6E /* HourlyCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -232,8 +245,8 @@
 		D00EA3092F4F4131008D1744 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D00EA30A2F4F4148008D1744 /* NetworkService.swift */,
-				D00EA30C2F4F4161008D1744 /* NetworkSession.swift */,
+				D0EDB8C12F516D74009BCE0A /* LocationService */,
+				D0EDB8C02F516D64009BCE0A /* NetworkService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -253,6 +266,32 @@
 				D00EA3192F4F4239008D1744 /* MainService.swift */,
 			);
 			path = Provider;
+			sourceTree = "<group>";
+		};
+		D00EA31E2F508E3A008D1744 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D00EA31F2F508E47008D1744 /* SkeletonView.swift */,
+				D0B1AE182F50A64C00634D6E /* GradientView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D0EDB8C02F516D64009BCE0A /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				D00EA30A2F4F4148008D1744 /* NetworkService.swift */,
+				D00EA30C2F4F4161008D1744 /* NetworkSession.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		D0EDB8C12F516D74009BCE0A /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				D0EDB8C22F516D91009BCE0A /* LocationService.swift */,
+			);
+			path = LocationService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,9 +372,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00EA2F02F4F2BD3008D1744 /* UIWindowTransitions.swift in Sources */,
+				D00EA3202F508E47008D1744 /* SkeletonView.swift in Sources */,
 				D00EA3042F4F3EA0008D1744 /* DailtyForecastCell.swift in Sources */,
 				D00EA30B2F4F4148008D1744 /* NetworkService.swift in Sources */,
 				D00EA2E62F4F2681008D1744 /* MainBuilder.swift in Sources */,
+				D00EA31D2F502EE3008D1744 /* MainDataFlow.swift in Sources */,
+				D0B1AE1B2F50AC1D00634D6E /* HourlyCell.swift in Sources */,
 				D00EA2E22F4F256E008D1744 /* RouterProtocol.swift in Sources */,
 				D00EA31A2F4F4239008D1744 /* MainService.swift in Sources */,
 				D00EA3182F4F4204008D1744 /* MainProvider.swift in Sources */,
@@ -356,8 +398,10 @@
 				D00EA2FB2F4F3398008D1744 /* UITableView.swift in Sources */,
 				D00EA3062F4F3ECF008D1744 /* LoadingCell.swift in Sources */,
 				D00EA30D2F4F4161008D1744 /* NetworkSession.swift in Sources */,
+				D0B1AE192F50A64C00634D6E /* GradientView.swift in Sources */,
 				D00EA2D62F4F23C4008D1744 /* MainViewController.swift in Sources */,
 				D00EA2DE2F4F24FC008D1744 /* BaseCoordinator.swift in Sources */,
+				D0EDB8C32F516D91009BCE0A /* LocationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

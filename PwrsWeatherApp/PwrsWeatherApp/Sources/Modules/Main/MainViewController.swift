@@ -28,6 +28,7 @@ final class MainViewController: UIViewController {
     init(interactor: MainBusinessLogic) {
         self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
+        tableDataSource.delegate = self
     }
 
     required init?(coder: NSCoder) {
@@ -48,7 +49,8 @@ final class MainViewController: UIViewController {
     }
 
     func getForecast() {
-        interactor.getForecast()
+        let request = Main.GetForecast.Request()
+        interactor.getForecast(request: request)
     }
 }
 

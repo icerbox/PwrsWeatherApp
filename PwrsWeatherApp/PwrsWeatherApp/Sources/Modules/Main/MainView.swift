@@ -11,10 +11,16 @@ final class MainView: UIView {
 
     private weak var delegate: MainViewControllerDelegate?
 
+    private lazy var gradientBackgroundView: GradientView = {
+        let view = GradientView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .systemBackground
+        tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -44,8 +50,14 @@ final class MainView: UIView {
     }
     
     private func setupLayout() {
+        addSubview(gradientBackgroundView)
         addSubview(tableView)
         NSLayoutConstraint.activate([
+            gradientBackgroundView.topAnchor.constraint(equalTo: topAnchor),
+            gradientBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            gradientBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            gradientBackgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
+
             tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
