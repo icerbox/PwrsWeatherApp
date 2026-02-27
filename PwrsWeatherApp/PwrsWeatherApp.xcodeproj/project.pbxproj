@@ -429,6 +429,7 @@
 				DEVELOPMENT_TEAM = LS85D3X83L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PwrsWeatherApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Мы используем вашу геолокацию для получения прогноза погоды";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -461,6 +462,7 @@
 				DEVELOPMENT_TEAM = LS85D3X83L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PwrsWeatherApp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Мы используем вашу геолокацию для получения прогноза погоды";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

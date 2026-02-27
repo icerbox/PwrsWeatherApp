@@ -10,7 +10,7 @@ import UIKit
 final class SkeletonView: UIView {
 
     private enum ViewMetrics {
-        static let backgroundColor: UIColor = .lightGray
+        static let backgroundColor: UIColor = .white
         static let animationDuration: CFTimeInterval = 0.5
     }
 

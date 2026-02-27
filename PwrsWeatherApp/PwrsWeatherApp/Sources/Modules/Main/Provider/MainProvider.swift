@@ -7,11 +7,8 @@
 
 protocol MainProviderProtocol {
 
-    /// Получение текущего прогноза погоды
-    func fetchCurrentWeather(completion: @escaping (RequestResult<WeatherResponse>) -> Void)
-
     /// Получение прогноза погоды на несколько дней
-    func fetchWeatherForecast(completion: @escaping (RequestResult<WeatherResponse>) -> Void)
+    func fetchWeatherForecast(latitude: String, longitude: String, completion: @escaping (RequestResult<WeatherResponse>) -> Void)
 }
 
 struct MainProvider: MainProviderProtocol {
@@ -22,11 +19,7 @@ struct MainProvider: MainProviderProtocol {
         self.service = service
     }
 
-    func fetchCurrentWeather(completion: @escaping (RequestResult<WeatherResponse>) -> Void) {
-        service.fetchCurrentWeather(completion: completion)
-    }
-
-    func fetchWeatherForecast(completion: @escaping (RequestResult<WeatherResponse>) -> Void) {
-        service.fetchWeatherForecast(completion: completion)
+    func fetchWeatherForecast(latitude: String, longitude: String, completion: @escaping (RequestResult<WeatherResponse>) -> Void) {
+        service.fetchWeatherForecast(latitude: latitude, longitude: longitude, completion: completion)
     }
 }
