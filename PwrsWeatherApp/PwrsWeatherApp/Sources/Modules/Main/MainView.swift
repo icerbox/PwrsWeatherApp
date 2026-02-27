@@ -21,6 +21,7 @@ final class MainView: UIView {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
+        tableView.refreshControl = refreshControl
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -67,5 +68,6 @@ final class MainView: UIView {
 
     func updateTableView() {
         tableView.reloadData()
+        self.refreshControl.endRefreshing()   
     }
 }
