@@ -166,7 +166,7 @@ final class CurrentWeatherCell: UITableViewCell {
     // MARK: - Configuration
     func configure(with viewModel: CurrentWeatherViewModel) {
         locationLabel.text = viewModel.locationName
-        temperatureLabel.text = "\(Int(viewModel.temperature))°"
+        temperatureLabel.text = viewModel.temperature
         conditionLabel.text = viewModel.condition
         highLowLabel.text = viewModel.highLow
 
@@ -177,22 +177,15 @@ final class CurrentWeatherCell: UITableViewCell {
         }
 
         if let humidityView = detailsStackView.arrangedSubviews[1].viewWithTag(100) as? UILabel {
-            humidityView.text = "\(viewModel.humidity)%"
+            humidityView.text = viewModel.humidity
         }
 
         if let windView = detailsStackView.arrangedSubviews[2].viewWithTag(100) as? UILabel {
-            windView.text = String(format: "%.0f", viewModel.windSpeed)
+            windView.text = viewModel.windSpeed
         }
 
         if let uvView = detailsStackView.arrangedSubviews[3].viewWithTag(100) as? UILabel {
-            let uvValue = Int(viewModel.uvIndex)
-            switch uvValue {
-            case 0...2: uvView.text = "Низкий"
-            case 3...5: uvView.text = "Средний"
-            case 6...7: uvView.text = "Высокий"
-            case 8...10: uvView.text = "Очень высокий"
-            default: uvView.text = "Экстремальный"
-            }
+            uvView.text = viewModel.uvIndex
         }
     }
 }
